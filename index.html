@@ -137,25 +137,28 @@
       background-repeat: no-repeat;
       position: relative;
     }
-    .panel-videos .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;     
-      height: 95%;           
-    }
     
-    .video-image.main {
-      max-width: 60%;   
+    
+    .video-container {
+      display: flex;
+      justify-content: center;   
+      align-items: center;  
+      height: 100%
+  }
+
+    .video-main {
+      max-width: 100%;    
+  }
+
+    .video-side {
+      max-width: 100%;            
       height: auto;
-}
-      .video-image.side1 {
-      max-width: 60%;   
-      height: auto;
-}
-    .video-image.side2 {
-      max-width: 60%;   
-      height: auto;
-}
+      left: 5px;
+      right: 1px;
+      margin-right: -4px;
+      margin-left: -4px;
+  }
+
 
     .panel-about {
       width: 100%;
@@ -231,12 +234,14 @@
       <div class="container"></div>
     </section>
 
-    <section class="panel-videos" id="videos">
-      <div class="container">
-      <img src="video1.png" alt="Video 1" class="video-imagemain">
-      <img src="video2.png" alt="Video 2" class="video-imageside1">
-      <img src="video3.png" alt="Video 3" class="video-imageside2"></div>
+     <section class="panel-videos" id="videos">
+      <div class="container video-container">
+        <img src="video2.png" alt="Video 2" class="video-side">
+        <img src="video1.png" alt="Main Video" class="video-main">
+        <img src="video3.png" alt="Video 3" class="video-side">
+      </div>
     </section>
+
 
     <section class="panel-about" id="about">
       <div class="container"></div>
