@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .frame {
+      width: 1440px;
+      max-width: 100%;
+      margin: 0 auto;
+      background: white;
+      border: 2px solid black;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .panel {
+      position: relative;
+      width: 100%;
+      height: 936px;
+      box-sizing: border-box;
+    }
+
+    .panel::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    #home.panel::after {
+      background-image: url('heroimage1.png');
+    }
+
+    #videos.panel::after {
+      background-image: url('videosection.png');
+    }
+
+    #about.panel::after {
+      background-image: url('aboutsection.png');
+    }
+
+    #webapp.panel::after {
+      background-image: url('webappsection.png');
+    }
+
+    #designs.panel::after {
+      background-image: url('designssection.png');
+    }
+
+    #resume.panel::after {
+      background-image: url('resumesection.png');
+    }
+
+    #contact.panel::after {
+      background-image: url('contactsection.png');
+    }
+  </style>
+</head>
+<body>
+
+  <div class="frame">
+
+    <section id="home" class="panel">
+      <div class="container"></div>
+    </section>
+
+    <section id="videos" class="panel">
+      <div class="container"></div>
+    </section>
+
+    <section id="about" class="panel">
+      <div class="container"></div>
+    </section>
+
+    <section id="webapp" class="panel">
+      <div class="container"></div>
+    </section>
+
+    <section id="designs" class="panel">
+      <div class="container"></div>
+    </section>
+
+    <section id="resume" class="panel">
+      <div class="container"></div>
+    </section>
+
+    <section id="contact" class="panel">
+      <div class="container"></div>
+    </section>
+
+  </div>
+
+</body>
+</html>
