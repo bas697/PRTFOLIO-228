@@ -25,7 +25,6 @@
       max-width: 100%;
       margin: 0 auto;
       background: white;
-      border: 2px solid black;
       box-sizing: border-box;
       padding: 5px 0px;
     }
@@ -40,7 +39,7 @@
     }
 
     .navbar {
-      width: 100%;
+      width: 90%;
       height: 76px;
       background: rgba(184, 55, 15, 0.95); 
       display: flex;
@@ -50,7 +49,7 @@
       gap: 40px;
       position: fixed;
       top: 1%;
-      left: 0px;
+      left: 5%;
       z-index: 10; 
     }
 
@@ -131,7 +130,6 @@
     }
     .panel-videos {
       width: 100%;
-      
       height: 708px;
       padding: 5px 0px;
       background-image: url('videosectionNEW.png');
@@ -139,6 +137,25 @@
       background-repeat: no-repeat;
       position: relative;
     }
+    .panel-videos .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;     
+      height: 95%;           
+    }
+    
+    .video-image.main {
+      max-width: 60%;   
+      height: auto;
+}
+      .video-image.side1 {
+      max-width: 60%;   
+      height: auto;
+}
+    .video-image.side2 {
+      max-width: 60%;   
+      height: auto;
+}
 
     .panel-about {
       width: 100%;
@@ -215,7 +232,10 @@
     </section>
 
     <section class="panel-videos" id="videos">
-      <div class="container"></div>
+      <div class="container">
+      <img src="video1.png" alt="Video 1" class="video-imagemain">
+      <img src="video2.png" alt="Video 2" class="video-imageside1">
+      <img src="video3.png" alt="Video 3" class="video-imageside2"></div>
     </section>
 
     <section class="panel-about" id="about">
