@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -63,7 +63,7 @@
     .navbar a:hover {
       opacity: 0.7;
     }
-    
+
     .hero-title {
       font-family: "Anton SC", sans-serif;
       font-style: normal;
@@ -136,147 +136,143 @@
       background-position: center;
       background-repeat: no-repeat;
       position: relative;
+      overflow: hidden;
     }
 
     .video-container {
-      display: flex;
-      justify-content: center;   
-      align-items: center;  
+      width: 100%;
       height: 100%;
+      position: relative;
+      perspective: 1500px;
     }
 
-    .video-main {
-      max-width: 100%;    
+    .video-wrapper {
+      position: absolute;
+      top: 50%;
+      left: -250px;
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease, z-index 0.6s ease;
     }
 
-    .video-side {
-      max-width: 100%;            
-      height: auto;
-      left: 5px;
-      right: 1px;
-      margin-right: -4px;
-      margin-left: -4px;
+    .video-wrapper img {
+      display: block;
+      width: 850px; /* bigger videos */
+      border: 2px solid #fff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .video-label {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: #FBFCD4;
+      font-size: 20px;
+      font-weight: 600;
+      text-shadow: 1px 1px 0 #A9320F, -1px 1px 0 #A9320F, 1px -1px 0 #A9320F, -1px -1px 0 #A9320F;
+      pointer-events: none;
     }
 
     .videos-label {
       position: absolute;
-      top: 95px;
-      left: 450px;
+      top: 30px;
+      left: 50%;
       transform: translateX(-50%);
       font-family: 'Fredoka One', sans-serif;
       font-size: 64px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
       color: #FBFCD4;
       z-index: 5;
       text-shadow: 2px 2px 0 #A9320F,-2px 2px 0 #A9320F,2px -2px 0 #A9320F,-2px -2px 0 #A9320F,0px 2px 0 #A9320F,2px 0px 0 #A9320F,-2px 0px 0 #A9320F,0px -2px 0 #A9320F; 
     }
 
-    .panel-about {
+    .panel-about, .panel-webapp, .panel-designs, .panel-skills, .panel-contact {
       width: 100%;
-      height: 800px;
-      padding: 5px 0px;
-      background-image: url('aboutsectionNEW.png');
       background-position: center;
       background-repeat: no-repeat;
       position: relative;
     }
 
-    .panel-webapp {
-      width: 100%;
-      height: 1295px;
-      padding: 5px 0px;
-      background-image: url('webappsectionNEW.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-    }
-
-    .panel-designs {
-      width: 100%;
-      height: 1787px;
-      padding: 5px 0px;
-      background-image: url('designsectionNEW.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-    }
-
-    .panel-skills {
-      width: 100%;
-      height: 382px;
-      padding: 5px 0px;
-      background-image: url('skillsectionNEW.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-    }
-
-    .panel-contact {
-      width: 100%;
-      height: 875px;
-      padding: 5px 0px;
-      background-image: url('contactsectionNEW.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-    }
+    .panel-about { height: 800px; background-image: url('aboutsectionNEW.png'); }
+    .panel-webapp { height: 1295px; background-image: url('webappsectionNEW.png'); }
+    .panel-designs { height: 1787px; background-image: url('designsectionNEW.png'); }
+    .panel-skills { height: 382px; background-image: url('skillsectionNEW.png'); }
+    .panel-contact { height: 875px; background-image: url('contactsectionNEW.png'); }
 
   </style>
 </head>
-
 <body>
 
-  <div class="frame">
+<div class="frame">
 
-    <section class="panel-home" id="home">
-      <h1 class="hero-title">BRENDAN</h1>
-      <div class="container"></div>
+  <section class="panel-home" id="home">
+    <h1 class="hero-title">BRENDAN</h1>
+    <div class="container"></div>
 
-      <div class="navbar">
-        <a href="#home">BRENDAN</a>
-        <a href="#videos">VIDEOS</a>
-        <a href="#about">ABOUT</a>
-        <a href="#webapp">WEB &amp APP</a>
-        <a href="#designs">DESIGNS</a>
-        <a href="#skills">TOOLKIT</a>
-        <a href="#contact">CONTACT</a>
+    <div class="navbar">
+      <a href="#home">BRENDAN</a>
+      <a href="#videos">VIDEOS</a>
+      <a href="#about">ABOUT</a>
+      <a href="#webapp">WEB &amp APP</a>
+      <a href="#designs">DESIGNS</a>
+      <a href="#skills">TOOLKIT</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </section>
+
+  <section class="panel-videos" id="videos">
+    <div class="videos-label">VIDEOS</div>
+    <div class="container video-container">
+      <div class="video-wrapper" data-index="0">
+        <img src="video1NEW.png" alt="Video 1">
+        <div class="video-label">Video 1 Text</div>
       </div>
-
-      <div class="container"></div>
-    </section>
-
-    <section class="panel-videos" id="videos">
-      <div class="videos-label">VIDEOS</div>
-      <div class="container video-container">
-        <img src="video2.png" alt="Video 2" class="video-side">
-        <img src="video1.png" alt="Main Video" class="video-main">
-        <img src="video3.png" alt="Video 3" class="video-side">
+      <div class="video-wrapper" data-index="1">
+        <img src="video2NEW.png" alt="Video 2">
+        <div class="video-label">Video 2 Text</div>
       </div>
-    </section>
+      <div class="video-wrapper" data-index="2">
+        <img src="video3NEW.png" alt="Video 3">
+        <div class="video-label">Video 3 Text</div>
+      </div>
+    </div>
+  </section>
 
-    <section class="panel-about" id="about">
-      <div class="container"></div>
-    </section>
+  <section class="panel-about" id="about"><div class="container"></div></section>
+  <section class="panel-webapp" id="webapp"><div class="container"></div></section>
+  <section class="panel-designs" id="designs"><div class="container"></div></section>
+  <section class="panel-skills" id="skills"><div class="container"></div></section>
+  <section class="panel-contact" id="contact"><div class="container"></div></section>
 
-    <section class="panel-webapp" id="webapp">
-      <div class="container"></div>
-    </section>
+</div>
 
-    <section class="panel-designs" id="designs">
-      <div class="container"></div>
-    </section>
+<script>
+const wrappers = document.querySelectorAll('.video-wrapper');
+let currentCenter = 0;
 
-    <section class="panel-skills" id="skills">
-      <div class="container"></div>
-    </section>
+function updatePositions() {
+  const radius = 500; // larger radius to fill section
 
-    <section class="panel-contact" id="contact">
-      <div class="container"></div>
-    </section>
+  wrappers.forEach((w, i) => {
+    let angle = ((i - currentCenter) / wrappers.length) * 2 * Math.PI;
+    let x = Math.sin(angle) * radius;
+    let z = Math.cos(angle) * radius;
+    let scale = 0.6 + 0.4 * (z / radius + 1)/2;
+    let left = 50 + x / 12; // horizontal spread
+    w.style.transform = `translateX(${left}%) translateY(-50%) scale(${scale})`;
+    w.style.zIndex = Math.round(scale * 100);
+  });
+}
 
-  </div>
+updatePositions();
+
+wrappers.forEach((w, index) => {
+  w.addEventListener('click', () => {
+    currentCenter = index;
+    updatePositions();
+  });
+});
+</script>
 
 </body>
 </html>
