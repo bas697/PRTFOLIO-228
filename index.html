@@ -6,7 +6,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
-
   <style>
     body {
       margin: 0;
@@ -39,7 +38,7 @@
     }
 
     .navbar {
-      width: 90%;
+      width: 70%;
       height: 76px;
       background: rgba(184, 55, 15, 0.95); 
       display: flex;
@@ -48,7 +47,7 @@
       border: 2px solid black;
       gap: 40px;
       position: fixed;
-      top: 1%;
+      top: 0.9%;
       left: 5%;
       z-index: 10; 
     }
@@ -87,8 +86,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 3;   
-}
-    
+    }
+
     .hero-title::before {
       content: "";
       position: absolute;
@@ -102,7 +101,8 @@
       background-color: #FFBB00;
       z-index: -1;   
       box-shadow: 0 7.915px 11.873px 5.936px rgba(0, 0, 0, 0.15),  0 3.958px 3.958px 0 rgba(0, 0, 0, 0.30);
-}
+    }
+
     .hero-title::after {
       content: "";
       position: absolute;
@@ -114,9 +114,9 @@
       background-color: #D59D04;
       border-radius: 50%;
       border: 3px #A9320F solid;
-      box-shadow: 0 0.989px 1.979px 0 rgba(0, 0, 0, 0.30), 0      1.979px 5.936px 1.979px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0.989px 1.979px 0 rgba(0, 0, 0, 0.30), 0 1.979px 5.936px 1.979px rgba(0, 0, 0, 0.15);
       z-index: -3;            
-}
+    }
 
     .panel-home {
       width: 100%;
@@ -126,8 +126,8 @@
       background-position: center;
       background-repeat: no-repeat;
       position: relative;
-      
     }
+
     .panel-videos {
       width: 100%;
       height: 708px;
@@ -137,18 +137,17 @@
       background-repeat: no-repeat;
       position: relative;
     }
-    
-    
+
     .video-container {
       display: flex;
       justify-content: center;   
       align-items: center;  
-      height: 100%
-  }
+      height: 100%;
+    }
 
     .video-main {
       max-width: 100%;    
-  }
+    }
 
     .video-side {
       max-width: 100%;            
@@ -157,8 +156,19 @@
       right: 1px;
       margin-right: -4px;
       margin-left: -4px;
-  }
+    }
 
+    .videos-label {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Fredoka One', sans-serif;
+      font-size: 32px;
+      color: #FFBB00;
+      z-index: 5;
+      pointer-events: none;
+    }
 
     .panel-about {
       width: 100%;
@@ -217,9 +227,9 @@
 
   <div class="frame">
 
-       <section class="panel-home" id="home">
-        <h1 class="hero-title">BRENDAN</h1>
-        <div class="container"></div>
+    <section class="panel-home" id="home">
+      <h1 class="hero-title">BRENDAN</h1>
+      <div class="container"></div>
 
       <div class="navbar">
         <a href="#home">BRENDAN</a>
@@ -234,14 +244,14 @@
       <div class="container"></div>
     </section>
 
-     <section class="panel-videos" id="videos">
+    <section class="panel-videos" id="videos">
+      <div class="videos-label">VIDEOS</div>
       <div class="container video-container">
         <img src="video2.png" alt="Video 2" class="video-side">
         <img src="video1.png" alt="Main Video" class="video-main">
         <img src="video3.png" alt="Video 3" class="video-side">
       </div>
     </section>
-
 
     <section class="panel-about" id="about">
       <div class="container"></div>
