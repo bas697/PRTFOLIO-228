@@ -149,17 +149,17 @@
     .video-wrapper {
       position: absolute;
       top: 50%;
-      left: -250px;
+      left: -215px;
       transform-style: preserve-3d;
       transition: transform 0.6s ease, z-index 0.6s ease;
     }
 
     .video-wrapper img {
       display: block;
-      width: 850px; /* bigger videos */
-      border: 2px solid #fff;
+      width: 832px; 
+      border: 2px solid black;
       box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-      border-radius: 10px;
+      border-radius: 6px;
       cursor: pointer;
     }
 
@@ -176,8 +176,8 @@
 
     .videos-label {
       position: absolute;
-      top: 30px;
-      left: 50%;
+      top: 84px;
+      left: 408px;
       transform: translateX(-50%);
       font-family: 'Fredoka One', sans-serif;
       font-size: 64px;
@@ -236,29 +236,32 @@
         <div class="video-label">Video 3 Text</div>
       </div>
     </div>
-  </section>
+  </section> 
 
   <section class="panel-about" id="about"><div class="container"></div></section>
   <section class="panel-webapp" id="webapp"><div class="container"></div></section>
   <section class="panel-designs" id="designs"><div class="container"></div></section>
   <section class="panel-skills" id="skills"><div class="container"></div></section>
   <section class="panel-contact" id="contact"><div class="container"></div></section>
-
 </div>
 
+/* used chatgpt for carousel script, then edited code and script to better fit my vision */
 <script>
 const wrappers = document.querySelectorAll('.video-wrapper');
 let currentCenter = 0;
 
 function updatePositions() {
-  const radius = 500; // larger radius to fill section
+  const radius = 400;  // wider spacing
 
   wrappers.forEach((w, i) => {
     let angle = ((i - currentCenter) / wrappers.length) * 2 * Math.PI;
     let x = Math.sin(angle) * radius;
     let z = Math.cos(angle) * radius;
+
     let scale = 0.6 + 0.4 * (z / radius + 1)/2;
-    let left = 50 + x / 12; // horizontal spread
+
+    let left = 50 + x / 7;  // more visible side videos
+
     w.style.transform = `translateX(${left}%) translateY(-50%) scale(${scale})`;
     w.style.zIndex = Math.round(scale * 100);
   });
@@ -273,6 +276,7 @@ wrappers.forEach((w, index) => {
   });
 });
 </script>
+
 
 </body>
 </html>
