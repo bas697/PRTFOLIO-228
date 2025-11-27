@@ -238,22 +238,23 @@
     <div class="container video-container">
 
       <div class="video-wrapper" data-index="0">
-        <img src="video1NEW.png" alt="Video 1">
-        <img class="play-button" src="play-button.svg" alt="Play">
-        <div class="video-label">UNDEAD AGAIN</div>
-      </div>
+      <img src="video1NEW.png" alt="Video 1">
+      <img class="play-button" src="play-button.svg" alt="Play" data-url="video1.html">
+      <div class="video-label">UNDEAD AGAIN</div>
+    </div>
 
-      <div class="video-wrapper" data-index="1">
-        <img src="video2NEW.png" alt="Video 2">
-        <img class="play-button" src="play-button.svg" alt="Play">
-        <div class="video-label">WATERLOO PARK</div>
-      </div>
+    <div class="video-wrapper" data-index="1">
+      <img src="video2NEW.png" alt="Video 2">
+      <img class="play-button" src="play-button.svg" alt="Play" data-url="video2.html">
+      <div class="video-label">WATERLOO PARK</div>
+    </div>
 
-      <div class="video-wrapper" data-index="2">
-        <img src="video3NEW.png" alt="Video 3">
-        <img class="play-button" src="play-button.svg" alt="Play">
-        <div class="video-label">SACRIFICE</div>
-      </div>
+    <div class="video-wrapper" data-index="2">
+      <img src="video3NEW.png" alt="Video 3">
+      <img class="play-button" src="play-button.svg" alt="Play" data-url="video3.html">
+      <div class="video-label">SACRIFICE</div>
+    </div>
+
 
     </div>
   </section>
@@ -303,6 +304,19 @@ wrappers.forEach((w, index) => {
     updatePositions();
   });
 });
+  
+  const playButtons = document.querySelectorAll('.play-button');
+
+playButtons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    const url = btn.getAttribute('data-url');
+    if (url) {
+      window.location.href = url; // Navigate to the page
+    }
+  });
+});
+
 </script>
 
 </body>
